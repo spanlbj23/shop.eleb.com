@@ -176,12 +176,13 @@ class ShopController extends Controller
             'area.required' => '区不能为空',
             'detail_address.required' => '详细地址不能为空',
         ]);
-        if ($validator->fails()) {
+      /*  if ($validator->fails()) {
             return [
                 'status' => 'false',
                 'message' => $validator->errors(),
             ];
-        }
+        }*/
+      
         if (!preg_match('/^1[3456789]\d{9}$/', $request->tel)) {
             return [
                 'status' => 'false',
